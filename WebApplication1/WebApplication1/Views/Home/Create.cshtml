@@ -1,0 +1,51 @@
+﻿@model Teacher
+
+@{
+    Layout = "_Layout";
+    var title = "CREATE Teacher";
+    ViewData["Title"] = title;
+}
+
+<style>
+    .input-validation-error {
+        border-color: red;
+    }
+    .subrayado {
+        text-decoration:underline;
+    }
+    .color-titulo {
+        color: rgb(136, 139, 146);
+    }
+</style>
+
+<h2 class="subrayado color-titulo">@title</h2>
+
+<div asp-validation-summary="ModelOnly" class="text-danger"></div>
+<form class="m-1 p-1" method="post">
+    <div class="form-group">
+        <label asp-for="Name"></label>
+        <input asp-for="Name" class="form-control" />
+        <span asp-validation-for="Name" class="text-danger"></span>
+    </div>
+    <div class="form-group">
+        <label asp-for="Skills"></label>
+        <input asp-for="Skills" type="text" class="form-control" />
+        <span asp-validation-for="Skills" class="text-danger"></span>
+    </div>
+    <div class="form-group">
+        <label asp-for="TotalStudents"></label>
+        <input asp-for="TotalStudents" type="text" class="form-control" />
+        <span asp-validation-for="TotalStudents" class="text-danger"></span>
+    </div>
+    <div class="form-group">
+        <label asp-for="Salary"></label>
+        <input asp-for="Salary" type="text" class="form-control" />
+        <span asp-validation-for="Salary" class="text-danger"></span> 
+    </div>
+    <button type="submit" class="btn btn-primary" title="Register new teacher"><i class="fas fa-paper-plane"></i> Submit</button>
+    <a asp-action="Index" class="btn btn-danger" title="Return to Index"><i class="fas fa-reply"></i> Return</a>
+</form>
+
+<script src="/lib/jquery/dist/jquery.min.js"></script>
+<script src="/lib/jquery-validation/dist/jquery.validate.min.js"></script>
+<script src="/lib/jquery-validation-unobtrusive/dist/jquery.validate.unobtrusive.min.js"></script>

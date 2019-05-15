@@ -1,0 +1,67 @@
+﻿@model IEnumerable<Teacher>
+
+@{
+    Layout = "_Layout";
+    var title = "READ Teacher";
+    ViewData["Title"] = title;
+ }
+
+<h2>@title</h2>
+<h3>
+    <a asp-action="Create" class="btn btn-primary" title="Create a new Teacher">
+        <i class="fas fa-plus"></i> Create
+    </a>
+</h3>
+
+<table class="table table-bordered table-sm table-striped">
+    <thead class="thead-dark">
+        <tr>
+            <th>Id</th>
+            <th>Name</th>
+            <th>Skills</th>
+            <th>Total Students</th>
+            <th>Salary</th>
+            <th>Added On</th>
+            <th>Update</th>
+            <th>Delete</th>
+        </tr>
+    </thead>
+    <tbody>
+        @if (Model == null)
+        {
+            <tr>
+                <td colspan="7" class="text-center">
+                    No Model Data
+                </td>
+            </tr>
+        }
+        else
+        {
+            @foreach (var p in Model)
+            {
+    <tr>
+        <td>@p.Id</td>
+        <td>@p.Name</td>
+        <td>@p.Skills</td>
+        <td>@p.TotalStudents</td>
+        <td>@p.Salary</td>
+        <td>@string.Format("{0:dddd, dd MMMM yyyy}", p.AddedOn)</td>
+        <td>
+            <a asp-action="Update" asp-route-id="@p.Id" class="btn btn-warning" title="Edit row">
+                <i class="fas fa-edit"></i> Update
+            </a>
+        </td>
+        <td>
+            <form asp-action="Delete" method="post" asp-route-id="@p.Id">
+                <button class="btn btn-danger" title="Remove row" onclick="return confirm('Are you sure you want to delete this?')"><i class="fas fa-trash-alt"></i>  Delete</button>
+            </form>
+        </td>
+
+    </tr>
+            }
+        }
+    </tbody>
+</table>
+
+
+
