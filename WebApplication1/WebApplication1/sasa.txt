@@ -1,0 +1,9 @@
+Deployment Production Apps React with Now:
+->npm run build
+->cd build
+->now --name name-your-project
+...
+...
+...Finished
+
+

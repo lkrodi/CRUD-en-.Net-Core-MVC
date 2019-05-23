@@ -55,7 +55,7 @@ namespace CRUDADO.Controllers
             using (SqlConnection connection = new SqlConnection(connectionString))
             {
                 connection.Open();
-                string sql = "SELECT * FROM Teacher";
+                string sql = "SELECT * FROM dbo.Teacher";
                 SqlCommand command = new SqlCommand(sql, connection);
                 using (SqlDataReader dataReader = command.ExecuteReader())
                 {

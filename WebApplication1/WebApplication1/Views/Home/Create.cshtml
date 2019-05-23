@@ -10,6 +10,7 @@
     .input-validation-error {
         border-color: red;
     }
+
     .subrayado {
         text-decoration:underline;
     }
@@ -18,7 +19,7 @@
     }
 </style>
 
-<h2 class="subrayado color-titulo">@title</h2>
+<h2 class="subrayado color-titulo">@ViewData["Title"]</h2>
 
 <div asp-validation-summary="ModelOnly" class="text-danger"></div>
 <form class="m-1 p-1" method="post">
@@ -45,7 +46,3 @@
     <button type="submit" class="btn btn-primary" title="Register new teacher"><i class="fas fa-paper-plane"></i> Submit</button>
     <a asp-action="Index" class="btn btn-danger" title="Return to Index"><i class="fas fa-reply"></i> Return</a>
 </form>
-
-<script src="/lib/jquery/dist/jquery.min.js"></script>
-<script src="/lib/jquery-validation/dist/jquery.validate.min.js"></script>
-<script src="/lib/jquery-validation-unobtrusive/dist/jquery.validate.unobtrusive.min.js"></script>
