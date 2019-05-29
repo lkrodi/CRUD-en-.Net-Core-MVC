@@ -5,7 +5,6 @@ C:\Users\LkRodi\Desktop\CRUD en .Net Core MVC\WebApplication1\WebApplication1\bi
 C:\Users\LkRodi\Desktop\CRUD en .Net Core MVC\WebApplication1\WebApplication1\bin\Debug\netcoreapp2.1\CRUDADO.pdb
 C:\Users\LkRodi\Desktop\CRUD en .Net Core MVC\WebApplication1\WebApplication1\bin\Debug\netcoreapp2.1\CRUDADO.Views.dll
 C:\Users\LkRodi\Desktop\CRUD en .Net Core MVC\WebApplication1\WebApplication1\bin\Debug\netcoreapp2.1\CRUDADO.Views.pdb
-C:\Users\LkRodi\Desktop\CRUD en .Net Core MVC\WebApplication1\WebApplication1\obj\Debug\netcoreapp2.1\CRUDADO.csprojAssemblyReference.cache
 C:\Users\LkRodi\Desktop\CRUD en .Net Core MVC\WebApplication1\WebApplication1\obj\Debug\netcoreapp2.1\CRUDADO.csproj.CoreCompileInputs.cache
 C:\Users\LkRodi\Desktop\CRUD en .Net Core MVC\WebApplication1\WebApplication1\obj\Debug\netcoreapp2.1\CRUDADO.RazorAssemblyInfo.cache
 C:\Users\LkRodi\Desktop\CRUD en .Net Core MVC\WebApplication1\WebApplication1\obj\Debug\netcoreapp2.1\CRUDADO.RazorAssemblyInfo.cs
@@ -16,6 +15,7 @@ C:\Users\LkRodi\Desktop\CRUD en .Net Core MVC\WebApplication1\WebApplication1\ob
 C:\Users\LkRodi\Desktop\CRUD en .Net Core MVC\WebApplication1\WebApplication1\obj\Debug\netcoreapp2.1\CRUDADO.RazorCoreGenerate.cache
 C:\Users\LkRodi\Desktop\CRUD en .Net Core MVC\WebApplication1\WebApplication1\obj\Debug\netcoreapp2.1\Razor\Views\Home\Create.g.cshtml.cs
 C:\Users\LkRodi\Desktop\CRUD en .Net Core MVC\WebApplication1\WebApplication1\obj\Debug\netcoreapp2.1\Razor\Views\Home\Index.g.cshtml.cs
+C:\Users\LkRodi\Desktop\CRUD en .Net Core MVC\WebApplication1\WebApplication1\obj\Debug\netcoreapp2.1\Razor\Views\Home\Update.g.cshtml.cs
 C:\Users\LkRodi\Desktop\CRUD en .Net Core MVC\WebApplication1\WebApplication1\obj\Debug\netcoreapp2.1\Razor\Views\Shared\_Layout.g.cshtml.cs
 C:\Users\LkRodi\Desktop\CRUD en .Net Core MVC\WebApplication1\WebApplication1\obj\Debug\netcoreapp2.1\Razor\Views\_ViewImports.g.cshtml.cs
 C:\Users\LkRodi\Desktop\CRUD en .Net Core MVC\WebApplication1\WebApplication1\obj\Debug\netcoreapp2.1\Razor\Views\_ViewStart.g.cshtml.cs
@@ -25,4 +25,4 @@ C:\Users\LkRodi\Desktop\CRUD en .Net Core MVC\WebApplication1\WebApplication1\ob
 C:\Users\LkRodi\Desktop\CRUD en .Net Core MVC\WebApplication1\WebApplication1\obj\Debug\netcoreapp2.1\CRUDADO.dll
 C:\Users\LkRodi\Desktop\CRUD en .Net Core MVC\WebApplication1\WebApplication1\obj\Debug\netcoreapp2.1\CRUDADO.pdb
 C:\Users\LkRodi\Desktop\CRUD en .Net Core MVC\WebApplication1\WebApplication1\obj\Debug\netcoreapp2.1\CRUDADO.csproj.CopyComplete
-C:\Users\LkRodi\Desktop\CRUD en .Net Core MVC\WebApplication1\WebApplication1\obj\Debug\netcoreapp2.1\Razor\Views\Home\Update.g.cshtml.cs
+C:\Users\LkRodi\Desktop\CRUD en .Net Core MVC\WebApplication1\WebApplication1\obj\Debug\netcoreapp2.1\CRUDADO.csprojAssemblyReference.cache

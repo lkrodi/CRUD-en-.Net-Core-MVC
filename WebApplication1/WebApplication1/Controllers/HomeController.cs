@@ -7,46 +7,19 @@ using System.Threading.Tasks;
 using CRUDADO.Models;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Configuration;
+
 namespace CRUDADO.Controllers
 {
     public class HomeController : Controller
     {
         public IConfiguration Configuration { get; }
+
         public HomeController(IConfiguration configuration)
         {
             Configuration = configuration;
         }
 
-        public IActionResult Create()
-        {
-            return View();
-        }
-
-        [HttpPost]
-        public IActionResult Create(Teacher teacher)
-        {
-            if (ModelState.IsValid)
-            {
-                string connectionString = Configuration["ConnectionStrings:DefaultConnection"];
-                using (SqlConnection connection = new SqlConnection(connectionString))
-                {
-                    string sql = $"Insert Into Teacher(Name, Skills, TotalStudents, Salary) Values('{teacher.Name}', '{teacher.Skills}', '{teacher.TotalStudents}', '{teacher.Salary}')";
-                    using (SqlCommand command = new SqlCommand(sql, connection))
-                    {
-                        command.CommandType = CommandType.Text;
-                        connection.Open();
-                        command.ExecuteNonQuery();
-                        connection.Close();
-                    }
-                    return RedirectToAction("Index");
-                }
-            }
-            else
-            {
-                return View();
-            }
-        }
-
+        [HttpGet]
         public IActionResult Index()
         {
             List<Teacher> teachersList = new List<Teacher>();
@@ -78,6 +51,13 @@ namespace CRUDADO.Controllers
             return View(teachersList);
         }
 
+        [HttpGet]
+        public IActionResult Create()
+        {
+            return View();
+        }
+
+        [HttpGet]
         public IActionResult Update(int id)
         {
             string connectionString = Configuration["ConnectionStrings:DefaultConnection"];
@@ -107,6 +87,32 @@ namespace CRUDADO.Controllers
         }
 
         [HttpPost]
+        [ActionName("Create")]
+        public IActionResult Create(Teacher teacher)
+        {
+            if (ModelState.IsValid)
+            {
+                string connectionString = Configuration["ConnectionStrings:DefaultConnection"];
+                using (SqlConnection connection = new SqlConnection(connectionString))
+                {
+                    string sql = $"Insert Into Teacher(Name, Skills, TotalStudents, Salary) Values('{teacher.Name}', '{teacher.Skills}', '{teacher.TotalStudents}', '{teacher.Salary}')";
+                    using (SqlCommand command = new SqlCommand(sql, connection))
+                    {
+                        command.CommandType = CommandType.Text;
+                        connection.Open();
+                        command.ExecuteNonQuery();
+                        connection.Close();
+                    }
+                    return RedirectToAction("Index");
+                }
+            }
+            else
+            {
+                return View();
+            }
+        }
+
+        [HttpPost]
         [ActionName("Update")]
         public IActionResult Update(Teacher teacher)
         {
@@ -125,6 +131,7 @@ namespace CRUDADO.Controllers
             return RedirectToAction("Index");
         }
 
+        [ActionName("Update")]
         [HttpPost]
         public IActionResult Delete(int id)
         {
